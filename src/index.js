@@ -16,7 +16,7 @@ const Activities = [
   },
 
   {
-    description: 'Watch tv',
+    description: 'Watch tv or Play video game',
     completed: true,
     index: 3,
   },
