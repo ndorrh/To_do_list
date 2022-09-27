@@ -42,7 +42,7 @@ const Activities = [
 
 const show = (arr) => {
   arr.forEach((e) => {
-    toDoContainer.innerHTML += `<div class="activity-container"><input type="checkbox"><li class ="item">${arr[arr.indexOf(e)].description}</li><i class="fa-solid fa-ellipsis-vertical"></i></div>`;
+    toDoContainer.innerHTML += `<div class="activity-container"><input type="checkbox" class="checkBox"><li class ="item">${arr[arr.indexOf(e)].description}</li><i class="fa-solid fa-ellipsis-vertical"></i></div>`;
   });
 };
 
