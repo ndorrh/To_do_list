@@ -4,13 +4,13 @@ const toDoContainer = document.getElementById('container');
 
 const Activities = [
   {
-    description: 'clean the house',
+    description: 'Clean the house',
     completed: true,
     index: 0,
   },
 
   {
-    description: 'go to school',
+    description: 'Go to school',
     completed: false,
     index: 1,
   },
@@ -28,13 +28,13 @@ const Activities = [
   },
 
   {
-    description: 'Go swimming',
+    description: 'Visit my grand Mother',
     completed: false,
     index: 5,
   },
 
   {
-    description: 'Go swimming',
+    description: 'Read a novel',
     completed: false,
     index: 6,
   },

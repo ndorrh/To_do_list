@@ -18,7 +18,7 @@ It is a web application that creates a To do list. In this project I implemented
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://ndorrh.github.io/final-capstone/)
+[Live Demo Link]()
 
 
 ## Getting Started
