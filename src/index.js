@@ -1,3 +1,5 @@
+import './style.css';
+
 const toDoContainer = document.getElementById('container');
 
 const Activities = [
