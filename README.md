@@ -1,6 +1,6 @@
 ![](/To-do-list.png)
 
-# Final Capstone: Wep development online website
+# To Do List
 
 > This project is a part of microverse training program. It was build using HTML5, CSS, JavaScript and webpack.
 It is a web application that creates a To do list. In this project I implemented the following:
@@ -44,9 +44,9 @@ The App is already deployed for you using Github pages
 
 👤 **Ndorrh Oswald Ebu**
 
-- GitHub: [@githubhandle](https://github.com/ndorrh)
-- Twitter: [@twitterhandle](https://twitter.com/ndorrh)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ndorrh-oswald-ebu-82ab02236/)
+- GitHub: [@ndorrh](https://github.com/ndorrh)
+- Twitter: [@ndorrh](https://twitter.com/ndorrh)
+- LinkedIn: [ndorrh](https://www.linkedin.com/in/ndorrh-oswald-ebu-82ab02236/)
 
 ## 🤝 Contributing
 

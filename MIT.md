@@ -1,4 +1,4 @@
-## Copyright 2021, NDORRH OSWALD EBU
+## Copyright 2022, NDORRH OSWALD EBU
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this webpages/website and associated documentation files, to deal in the webpages/website without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the webpages/website, and to permit persons to whom the webpages/website is furnished to do so, subject to the following conditions:
 
