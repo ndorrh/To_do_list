@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+#new-to-do, #clear {
+  border: none;
+  width: 100%;
+}
+
+#new-to-do:focus, #clear:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 80%;
+  margin: 10% auto;
+  background-color: white;
+  box-shadow: 6px 3px 37px -10px rgba(0,0,0,0.55);
+}
+
+#new-to-do, #clear, .activity-container, .head {
+  padding: 2%;
+  height: 75px;
+  border-bottom: solid 2px rgb(203, 199, 199);
+}
+
+.item {
+  list-style: none;
+}
+
+.activity-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#clear {
+  text-align: center;
+}
+
+.fa-solid {
+  margin-left: auto;
+  color: rgb(203, 199, 199);;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
