@@ -1,6 +1,8 @@
 import './style.css';
 
 const toDoContainer = document.getElementById('container');
+const newTask = document.getElementById('new-to-do');
+let arr = [];
 
 const Activities = [
   {
@@ -40,17 +42,25 @@ const Activities = [
   },
 ];
 
-const show = (arr) => {
-  arr.forEach((e) => {
-    toDoContainer.innerHTML += `<div class="activity-container">
-    <input type="checkbox" class="checkBox">
-    <li class ="item" >${arr[arr.indexOf(e)].description}</li>
-    <input type="text" id="edit-to-do" class ="hidden" >
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-    <i class="fa-regular fa-trash-can hidden"></i>
-    
+const appendToParent = (elem) => {
+  toDoContainer.innerHTML += `<div class="activity-container">
+    <input type="checkbox">
+    <li class ="item">${arr[arr.indexOf(elem)].description}</li>
+    <i class="fa-solid fa-ellipsis-vertical delete"></i>
     </div>`;
+};
+
+const show = () => {
+  arr = JSON.parse(localStorage.getItem('todaysActivities'));
+  arr.forEach((toDo) => {
+    appendToParent(toDo);
+    const deleteBtn = document.querySelectorAll('.delete');
+    deleteBtn.forEach((e, index) => {
+      e.addEventListener('click', () => {
+        remove(index);
+      });
+    });
   });
 };
 
-show(Activities);
+show();
