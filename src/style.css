@@ -81,3 +81,7 @@
   width: 20px;
   height: 20px;
 }
+
+#addBtn {
+  transform: rotate(90deg);
+}

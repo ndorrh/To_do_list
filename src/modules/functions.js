@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 import {
-  toDoContainer,
+  toDoContainer, newTask,
 } from './variable.js';
 
 let arr = [];
@@ -8,7 +8,6 @@ let arr = [];
 const appendToParent = (elem) => {
   toDoContainer.innerHTML += `<div class="activity-container">
     <input type="checkbox" class="checkBox">
-    <li class =" hidden" >${arr[arr.indexOf(elem)].description}</li>
     <input type="text" id="edit-to-do" readonly class ="item" value ='${arr[arr.indexOf(elem)].description}' >
     <i class="fa-solid fa-ellipsis-vertical drag"></i>
     <i class="fa-regular fa-trash-can hidden delete"></i>
@@ -86,6 +85,12 @@ const remove = (taskToRemove) => {
   show();
 };
 
+const storeAndSetaddArea = () => {
+  storeToLocalStorage(newTask);
+  newTask.value = '';
+  toDoContainer.innerHTML = '';
+};
+
 export {
-  appendToParent, add, storeToLocalStorage, edit, show, remove,
+  appendToParent, add, storeToLocalStorage, edit, show, remove, storeAndSetaddArea,
 };

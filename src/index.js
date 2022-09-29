@@ -1,19 +1,22 @@
 import './style.css';
 
 import {
-  toDoContainer, newTask,
+  newTask, newTaskBtn, refreshBtn, toDoContainer,
 } from './modules/variable.js';
 
 import {
-  storeToLocalStorage, show,
+  show, storeAndSetaddArea,
 } from './modules/functions.js';
+
+refreshBtn.addEventListener('click', () => {
+  toDoContainer.innerHTML = '';
+  show();
+});
 
 if (!localStorage.getItem('todaysActivities')) {
   newTask.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && newTask.value !== '') {
-      storeToLocalStorage(newTask);
-      newTask.value = '';
-      toDoContainer.innerHTML = '';
+      storeAndSetaddArea();
 
       show();
     }
@@ -24,10 +27,14 @@ if (!localStorage.getItem('todaysActivities')) {
 
 newTask.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && newTask.value !== '') {
-    storeToLocalStorage(newTask);
-    newTask.value = '';
-    toDoContainer.innerHTML = '';
+    storeAndSetaddArea();
+    show();
+  }
+});
 
+newTaskBtn.addEventListener('click', () => {
+  if (newTask.value !== '') {
+    storeAndSetaddArea();
     show();
   }
 });
