@@ -5,10 +5,10 @@ import {
 
 let arr = [];
 
-const appendToParent = (elem) => {
+const appendToParent = (elem, val, style) => {
   toDoContainer.innerHTML += `<div class="activity-container">
-    <input type="checkbox" class="checkBox">
-    <input type="text" id="edit-to-do" readonly class ="item" value ='${arr[arr.indexOf(elem)].description}' >
+    <input type="checkbox" class="checkBox" ${val}>
+    <input type="text" id="edit-to-do" readonly class ="item" value ='${arr[arr.indexOf(elem)].description}' style ="text-decoration: ${style}">
     <i class="fa-solid fa-ellipsis-vertical drag"></i>
     <i class="fa-regular fa-trash-can hidden delete"></i>
     </div>`;
@@ -59,12 +59,33 @@ const edit = (del, drag, edit) => {
 
 const show = () => {
   arr = JSON.parse(localStorage.getItem('todaysActivities'));
-  arr.forEach((toDo) => {
-    appendToParent(toDo);
+  arr.forEach((toDo, index) => {
+    let check;
+    let style;
+    if (arr[index].completed === true) {
+      check = 'checked';
+      style = 'line-through';
+    }
+    appendToParent(toDo, check, style);
     const deleteBtn = document.querySelectorAll('.delete');
     const editBtn = document.querySelectorAll('.item');
     const dragBtn = document.querySelectorAll('.drag');
+    const completedTaskBtn = document.querySelectorAll('.checkBox');
     edit(deleteBtn, dragBtn, editBtn);
+
+    completedTaskBtn.forEach((checkBox, index) => {
+      checkBox.addEventListener('change', () => {
+        if (checkBox.checked === true) {
+          arr[index].completed = true;
+          editBtn[index].style.textDecoration = 'line-through';
+          localStorage.setItem('todaysActivities', JSON.stringify(arr));
+        } else {
+          arr[index].completed = false;
+          editBtn[index].style.textDecoration = 'none';
+          localStorage.setItem('todaysActivities', JSON.stringify(arr));
+        }
+      });
+    });
 
     deleteBtn.forEach((e, index) => {
       e.addEventListener('click', () => {

@@ -1,5 +1,7 @@
 import './style.css';
 
+import './modules/interactions.js';
+
 import {
   newTask, newTaskBtn, refreshBtn, toDoContainer,
 } from './modules/variable.js';
