@@ -1,9 +1,5 @@
 import './style.css';
-
-const toDoContainer = document.getElementById('container');
-const newTask = document.getElementById('new-to-do');
-let arr = [];
-
+import './modules/functions.js';
 
 if (!localStorage.getItem('todaysActivities')) {
   newTask.addEventListener('keypress', (e) => {
