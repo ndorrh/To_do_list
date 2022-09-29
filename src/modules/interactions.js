@@ -10,16 +10,12 @@ const clearBtn = document.getElementById('clear');
 
 clearBtn.addEventListener('click', () => {
   const retriveTask = JSON.parse(localStorage.getItem('todaysActivities'));
-  retriveTask.forEach((e, val) => {
-    if (retriveTask[retriveTask.indexOf(e)].completed === true) {
-      retriveTask.splice(val, 1);
-      console.log(e);
-    }
-    retriveTask.forEach((element, val) => {
-      retriveTask[retriveTask.indexOf(element)].index = val + 1;
-    });
-    localStorage.setItem('todaysActivities', JSON.stringify(retriveTask));
-    toDoContainer.innerHTML = '';
-    show();
+  const result = retriveTask.filter((val) => val.completed === false);
+
+  result.forEach((element, val) => {
+    result[result.indexOf(element)].index = val + 1;
   });
+  localStorage.setItem('todaysActivities', JSON.stringify(result));
+  toDoContainer.innerHTML = '';
+  show();
 });
