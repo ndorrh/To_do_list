@@ -1,3 +1,10 @@
+/* eslint-disable no-use-before-define */
+import {
+  toDoContainer,
+} from './variable.js';
+
+let arr = [];
+
 const appendToParent = (elem) => {
   toDoContainer.innerHTML += `<div class="activity-container">
     <input type="checkbox" class="checkBox">
@@ -74,4 +81,8 @@ const remove = (taskToRemove) => {
   localStorage.setItem('todaysActivities', JSON.stringify(retrive));
   toDoContainer.innerHTML = '';
   show();
+};
+
+export {
+  appendToParent, add, storeToLocalStorage, edit, show, remove,
 };
