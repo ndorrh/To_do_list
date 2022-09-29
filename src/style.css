@@ -5,26 +5,38 @@
   font-size: 1.2rem;
 }
 
+.hidden {
+  display: none;
+}
+
 #new-to-do,
-#clear {
+#clear,
+#edit-to-do {
   border: none;
   width: 100%;
+}
+
+#new-to-do,
+#edit-to-do {
+  padding: 2%;
+  height: 70px;
 }
 
 #clear {
   text-align: center;
 }
 
-#new-to-do,
 #clear,
 .activity-container,
-.head {
+.head,
+.newtodo-wraper {
   padding: 2%;
   height: 75px;
   border-bottom: solid 2px rgb(203, 199, 199);
 }
 
 #new-to-do:focus,
+#edit-to-do:focus,
 #clear:focus {
   outline: none;
 }
@@ -38,6 +50,7 @@
 
 .item {
   list-style: none;
+  background-color: white;
 }
 
 .activity-container {
@@ -46,18 +59,20 @@
   align-items: center;
 }
 
-.fa-solid {
+.fa-solid,
+.fa-regular {
   margin-left: auto;
   color: rgb(203, 199, 199);
 }
 
-.head {
+.head,
+.newtodo-wraper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-input:placeholder-shown {
+#new-to-do:placeholder-shown {
   font-style: italic;
 }
 
@@ -65,4 +80,8 @@ input:placeholder-shown {
   border: solid 6px rgb(203, 199, 199);
   width: 20px;
   height: 20px;
+}
+
+#addBtn {
+  transform: rotate(90deg);
 }

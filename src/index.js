@@ -1,49 +1,40 @@
 import './style.css';
 
-const toDoContainer = document.getElementById('container');
+import {
+  newTask, newTaskBtn, refreshBtn, toDoContainer,
+} from './modules/variable.js';
 
-const Activities = [
-  {
-    description: 'Clean the house',
-    completed: true,
-    index: 0,
-  },
+import {
+  show, storeAndSetaddArea,
+} from './modules/functions.js';
 
-  {
-    description: 'Go to school',
-    completed: false,
-    index: 1,
-  },
+refreshBtn.addEventListener('click', () => {
+  toDoContainer.innerHTML = '';
+  show();
+});
 
-  {
-    description: 'Watch tv or Play video game',
-    completed: true,
-    index: 3,
-  },
+if (!localStorage.getItem('todaysActivities')) {
+  newTask.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && newTask.value !== '') {
+      storeAndSetaddArea();
 
-  {
-    description: 'Go swimming',
-    completed: false,
-    index: 4,
-  },
-
-  {
-    description: 'Visit my grand Mother',
-    completed: false,
-    index: 5,
-  },
-
-  {
-    description: 'Read a novel',
-    completed: false,
-    index: 6,
-  },
-];
-
-const show = (arr) => {
-  arr.forEach((e) => {
-    toDoContainer.innerHTML += `<div class="activity-container"><input type="checkbox" class="checkBox"><li class ="item">${arr[arr.indexOf(e)].description}</li><i class="fa-solid fa-ellipsis-vertical"></i></div>`;
+      show();
+    }
   });
-};
+} else {
+  show();
+}
 
-show(Activities);
+newTask.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' && newTask.value !== '') {
+    storeAndSetaddArea();
+    show();
+  }
+});
+
+newTaskBtn.addEventListener('click', () => {
+  if (newTask.value !== '') {
+    storeAndSetaddArea();
+    show();
+  }
+});

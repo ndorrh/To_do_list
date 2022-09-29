@@ -9,7 +9,9 @@ It is a web application that creates a To do list. In this project I implemented
 2) Added an index.html that contains markup for the page
 3) Added an index.js file that contains array of object of the various to do activities.
 4)Added style.css file in src/ with styling for the page.
-5) Use webpack to bundle all the files in the src/ folder into dist/ folder that contains index.html and main.js.
+5) Added and remove function to add and remove items from the array
+6) Added edit function to edit the various task
+7) Use webpack to bundle all the files in the src/ folder into dist/ folder that contains index.html and main.js.
 ## Built With
 
 - HTML5, CSS and JavaScript
