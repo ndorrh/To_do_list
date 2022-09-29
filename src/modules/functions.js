@@ -19,7 +19,7 @@ const add = (input) => {
   arr.push({
     description: input.value,
     completed: false,
-    index: arr.length,
+    index: arr.length + 1,
   });
 };
 
@@ -78,6 +78,9 @@ const show = () => {
 const remove = (taskToRemove) => {
   const retrive = JSON.parse(localStorage.getItem('todaysActivities'));
   retrive.splice(taskToRemove, 1);
+  retrive.forEach((element, val) => {
+    retrive[val].index = val + 1;
+  });
   localStorage.setItem('todaysActivities', JSON.stringify(retrive));
   toDoContainer.innerHTML = '';
   show();
