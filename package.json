@@ -1,16 +1,17 @@
 {
   "name": "webpack-demo",
   "version": "1.0.0",
-  "description": "My first webpack project",
+  "description": "To Do list project",
   "private": true,
   "scripts": {
-     "watch": "webpack --watch",
+    "watch": "webpack --watch",
     "start": "webpack serve --open",
-     "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndorrh/Hello-world.git"
+    "url": "git+https://github.com/ndorrh/webpack-demo"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/ndorrh/Hello-world/issues"
   },
-  "homepage": "https://github.com/ndorrh/Hello-world#readme",
+  "homepage": "https://ndorrh.github.io/webpack-demo",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -225,6 +226,7 @@
     "get-symbol-description": "^1.0.0",
     "get-uri": "^3.0.2",
     "getpass": "^0.1.7",
+    "gh-pages": "^4.0.0",
     "glob": "^7.2.3",
     "glob-parent": "^5.1.2",
     "global-dirs": "^3.0.0",
@@ -384,6 +386,7 @@
     "minizlib": "^2.1.2",
     "mkdirp": "^1.0.4",
     "mkdirp-classic": "^0.5.3",
+    "moment": "^2.29.4",
     "ms": "^2.1.2",
     "mutationobserver-shim": "^0.3.7",
     "nanoid": "^3.3.4",

@@ -7,6 +7,10 @@ import {
 } from './functions.js';
 
 const clearBtn = document.getElementById('clear');
+const time = document.getElementById('time');
+const moment = require('moment');
+
+time.innerHTML = `${moment().format('MMMM Do YYYY, h: mm:ss a')}`;
 
 clearBtn.addEventListener('click', () => {
   const retriveTask = JSON.parse(localStorage.getItem('todaysActivities'));
