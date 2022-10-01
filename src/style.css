@@ -85,3 +85,8 @@
 #addBtn {
   transform: rotate(90deg);
 }
+
+#time {
+  color: blue;
+  margin-left: 30%;
+}
