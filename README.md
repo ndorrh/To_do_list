@@ -1,9 +1,9 @@
-![](/To-do-list.png)
-
 # To Do List
 
 > This project is a part of microverse training program. It was build using HTML5, CSS, JavaScript and webpack.
 It is a web application that creates a To do list. In this project I implemented the following:
+
+![](/To-do-list.png)
 
 1) Add webpack to the project
 2) Added an index.html that contains markup for the page
